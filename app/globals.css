@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-serif), serif;
-  --font-script: var(--font-script), cursive;
-  --font-sans: var(--font-sans), sans-serif;
-
   --color-gold-50: #FAF5EB;
   --color-gold-100: #F3E6CD;
   --color-gold-200: #E6CD9C;
@@ -17,6 +13,12 @@
   --color-dark-900: #0B0B0C; /* Primary Obsidian Dark */
   --color-dark-800: #121214; /* Secondary Card background */
   --color-dark-700: #1C1C1E;
+}
+
+@theme inline {
+  --font-serif: var(--next-font-serif);
+  --font-script: var(--next-font-script);
+  --font-sans: var(--next-font-sans);
 }
 
 :root {
@@ -49,4 +51,18 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #C5A880;
+}
+
+/* Hide default cursor on desktop devices to show the custom cursor */
+@media (pointer: fine) {
+  body, 
+  a, 
+  button, 
+  [role="button"], 
+  .cursor-pointer,
+  input[type="submit"],
+  input[type="button"],
+  select {
+    cursor: none !important;
+  }
 }
