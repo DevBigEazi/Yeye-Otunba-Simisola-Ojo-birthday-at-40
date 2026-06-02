@@ -5,6 +5,7 @@ import GoldParticles from "./components/GoldParticles";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CountdownQuote from "./components/CountdownQuote";
+import Achievements from "./components/Achievements";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,9 +42,9 @@ export default function Home() {
 
       {/* Countdown & Quote Section */}
       <CountdownQuote />
-      <div id="achievements" className="min-h-screen flex items-center justify-center bg-dark-900">
-        <span className="text-gray-600 font-serif">Achievements Section Placeholder</span>
-      </div>
+
+      {/* 40 Achievements Section */}
+      <Achievements />
       <div id="journey" className="min-h-screen flex items-center justify-center bg-dark-800">
         <span className="text-gray-600 font-serif">Journey Section Placeholder</span>
       </div>
