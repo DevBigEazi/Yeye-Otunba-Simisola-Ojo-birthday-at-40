@@ -21,9 +21,10 @@ export default function CustomCursor() {
   useEffect(() => {
     // Only show custom cursor on devices that support a fine pointer (desktops)
     const mediaQuery = window.matchMedia("(pointer: fine)");
-    if (!mediaQuery.matches) return;
-
-    setIsVisible(true);
+    if (!mediaQuery.matches) {
+      document.documentElement.classList.remove("custom-cursor-ready");
+      return;
+    }
 
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
@@ -53,7 +54,13 @@ export default function CustomCursor() {
     document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("mouseenter", handleMouseEnter);
 
+    // Schedule state change asynchronously to avoid synchronous setState inside render/mount effect (satisfies ESLint rule)
+    const initTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 0);
+
     return () => {
+      clearTimeout(initTimer);
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mouseover", handleMouseOver);
       document.removeEventListener("mouseleave", handleMouseLeave);
@@ -61,13 +68,27 @@ export default function CustomCursor() {
     };
   }, [cursorX, cursorY]);
 
+  // Handle document class list toggling once initialized, to prevent cursor loss prior to rendering
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(pointer: fine)");
+    if (isVisible && mediaQuery.matches) {
+      document.documentElement.classList.add("custom-cursor-ready");
+    } else {
+      document.documentElement.classList.remove("custom-cursor-ready");
+    }
+
+    return () => {
+      document.documentElement.classList.remove("custom-cursor-ready");
+    };
+  }, [isVisible]);
+
   if (!isVisible) return null;
 
   return (
     <>
       {/* Outer Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-gold-400/40 rounded-full pointer-events-none z-[9999] flex items-center justify-center"
+        className="fixed top-0 left-0 w-8 h-8 border border-gold-400/40 rounded-full pointer-events-none z-9999 flex items-center justify-center"
         style={{
           x: ringX,
           y: ringY,
@@ -84,7 +105,7 @@ export default function CustomCursor() {
       
       {/* Inner Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-gold-400 rounded-full pointer-events-none z-[9999] shadow-[0_0_8px_#D4AF37] flex items-center justify-center"
+        className="fixed top-0 left-0 w-2.5 h-2.5 bg-gold-400 rounded-full pointer-events-none z-9999 shadow-[0_0_8px_#D4AF37] flex items-center justify-center"
         style={{
           x: dotX,
           y: dotY,

@@ -53,16 +53,17 @@ body {
   background: #C5A880;
 }
 
-/* Hide default cursor on desktop devices to show the custom cursor */
+/* Hide default cursor on desktop devices to show the custom cursor when ready */
 @media (pointer: fine) {
-  body, 
-  a, 
-  button, 
-  [role="button"], 
-  .cursor-pointer,
-  input[type="submit"],
-  input[type="button"],
-  select {
+  .custom-cursor-ready,
+  .custom-cursor-ready body, 
+  .custom-cursor-ready a, 
+  .custom-cursor-ready button, 
+  .custom-cursor-ready [role="button"], 
+  .custom-cursor-ready .cursor-pointer,
+  .custom-cursor-ready input[type="submit"],
+  .custom-cursor-ready input[type="button"],
+  .custom-cursor-ready select {
     cursor: none !important;
   }
 }

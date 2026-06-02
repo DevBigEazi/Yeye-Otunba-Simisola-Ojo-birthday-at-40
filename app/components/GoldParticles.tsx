@@ -12,7 +12,7 @@ export default function GoldParticles() {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let particles: Array<{
+    const particles: Array<{
       x: number;
       y: number;
       size: number;
