@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import GoldParticles from "./components/GoldParticles";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import CountdownQuote from "./components/CountdownQuote";
+import Achievements from "./components/Achievements";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,13 +40,11 @@ export default function Home() {
       {/* Hero / Landing Section */}
       <Hero scrollToSection={scrollToSection} />
 
-      {/* Temporary spacing markers for testing scroll navigations */}
-      <div id="countdown" className="min-h-screen flex items-center justify-center bg-dark-800">
-        <span className="text-gray-600 font-serif">Countdown & Quote Section Placeholder</span>
-      </div>
-      <div id="achievements" className="min-h-screen flex items-center justify-center bg-dark-900">
-        <span className="text-gray-600 font-serif">Achievements Section Placeholder</span>
-      </div>
+      {/* Countdown & Quote Section */}
+      <CountdownQuote />
+
+      {/* 40 Achievements Section */}
+      <Achievements />
       <div id="journey" className="min-h-screen flex items-center justify-center bg-dark-800">
         <span className="text-gray-600 font-serif">Journey Section Placeholder</span>
       </div>
