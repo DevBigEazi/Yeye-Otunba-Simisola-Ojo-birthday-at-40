@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ scrollToSection }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center px-6 text-center z-10 pt-20 pb-36">
+    <section className="relative min-h-screen flex flex-col justify-center items-center px-6 text-center z-10 pt-20 pb-16 md:pb-36">
 
 
       {/* Ambient Gold Radial Glow (Overhead Wash) */}
