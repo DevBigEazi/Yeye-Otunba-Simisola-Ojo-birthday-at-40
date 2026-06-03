@@ -20,8 +20,6 @@ function TimeLeftDisplay() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-
     const calculateTimeLeft = () => {
       // June 6, 2026 00:00:00 (Nigeria/London Local Time BST/WAT, which is UTC+1)
       const target = new Date("2026-06-06T00:00:00+01:00").getTime();
@@ -41,14 +39,19 @@ function TimeLeftDisplay() {
       return time;
     };
 
-    // Set initial time right away on client mount
-    setTimeLeft(calculateTimeLeft());
+    const initTimer = setTimeout(() => {
+      setIsMounted(true);
+      setTimeLeft(calculateTimeLeft());
+    }, 0);
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearTimeout(initTimer);
+      clearInterval(timer);
+    };
   }, []);
 
   const formatNumber = (num: number) => {

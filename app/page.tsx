@@ -6,6 +6,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CountdownQuote from "./components/CountdownQuote";
 import Achievements from "./components/Achievements";
+import Journey from "./components/Journey";
+import ClosingTribute from "./components/ClosingTribute";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,18 +48,24 @@ export default function Home() {
 
       {/* 40 Achievements Section */}
       <Achievements />
-      <div id="journey" className="min-h-screen flex items-center justify-center bg-dark-800">
-        <span className="text-gray-600 font-serif">Journey Section Placeholder</span>
-      </div>
+
+      {/* Journey / Timeline Section */}
+      <Journey />
       <div id="gallery" className="min-h-screen flex items-center justify-center bg-dark-900">
         <span className="text-gray-600 font-serif">Gallery Section Placeholder</span>
       </div>
       <div id="messages" className="min-h-screen flex items-center justify-center bg-dark-800">
         <span className="text-gray-600 font-serif">Messages Section Placeholder</span>
       </div>
+
       <div id="wishlist" className="min-h-screen flex items-center justify-center bg-dark-900">
         <span className="text-gray-600 font-serif">Wishlist Section Placeholder</span>
       </div>
+
+      {/* Celebration Quote & Closing Section */}
+      <ClosingTribute />
+      {/* Footer Section */}
+      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }
