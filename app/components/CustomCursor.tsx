@@ -38,9 +38,12 @@ export default function CustomCursor() {
       const isInteractive =
         target.tagName === "A" ||
         target.tagName === "BUTTON" ||
+        target.tagName === "INPUT" ||
+        target.tagName === "SELECT" ||
+        target.tagName === "TEXTAREA" ||
         target.closest("a") ||
         target.closest("button") ||
-        window.getComputedStyle(target).cursor === "pointer" ||
+        target.closest("[role='button']") ||
         target.classList.contains("cursor-pointer");
 
       setIsHovered(!!isInteractive);

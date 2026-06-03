@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import CountdownQuote from "./components/CountdownQuote";
 import Achievements from "./components/Achievements";
 import Journey from "./components/Journey";
+import Gallery from "./components/Gallery";
+import VideoMessages from "./components/VideoMessages";
 import ClosingTribute from "./components/ClosingTribute";
 import Footer from "./components/Footer";
 
@@ -51,12 +53,12 @@ export default function Home() {
 
       {/* Journey / Timeline Section */}
       <Journey />
-      <div id="gallery" className="min-h-screen flex items-center justify-center bg-dark-900">
-        <span className="text-gray-600 font-serif">Gallery Section Placeholder</span>
-      </div>
-      <div id="messages" className="min-h-screen flex items-center justify-center bg-dark-800">
-        <span className="text-gray-600 font-serif">Messages Section Placeholder</span>
-      </div>
+
+      {/* Gallery Section */}
+      <Gallery />
+
+      {/* Video Messages Section */}
+      <VideoMessages />
 
       <div id="wishlist" className="min-h-screen flex items-center justify-center bg-dark-900">
         <span className="text-gray-600 font-serif">Wishlist Section Placeholder</span>
