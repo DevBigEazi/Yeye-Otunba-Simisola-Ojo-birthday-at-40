@@ -296,7 +296,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative bg-dark-900 text-gray-200 px-6 py-20 md:py-32 overflow-hidden border-t border-gray-800/20"
+      className="relative bg-dark-900 text-gray-200 px-6 py-12 md:py-32 overflow-hidden border-t border-gray-800/20"
     >
       {/* Subtle Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(197,168,128,0.04)_0%,transparent_70%)] pointer-events-none z-0" />

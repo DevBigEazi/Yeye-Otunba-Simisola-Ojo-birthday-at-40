@@ -27,7 +27,7 @@ const itemVariants: Variants = {
 
 export default function ClosingTribute() {
   return (
-    <section className="relative bg-dark-900 text-gray-200 px-6 py-24 md:py-36 overflow-hidden border-t border-gray-800/10 select-none">
+    <section className="relative bg-dark-900 text-gray-200 px-6 py-14 md:py-36 overflow-hidden border-t border-gray-800/10 select-none">
       {/* Soft Ambient Radial Gold Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(197,168,128,0.04)_0%,transparent_75%)] pointer-events-none z-0" />
 
