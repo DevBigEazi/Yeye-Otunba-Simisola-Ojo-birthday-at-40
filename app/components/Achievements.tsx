@@ -327,7 +327,7 @@ export default function Achievements() {
         {/* Seamless Grid Container with key to re-trigger animation on pagination change */}
         <div
           key={isMobile ? currentPage : "desktop"}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-800/40 border border-gray-800/40 select-none"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-800/40 border border-gray-800/40"
         >
           {displayedAchievements.map((item, index) => (
             <motion.div

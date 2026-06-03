@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-dark-900 text-[#F3F4F6] overflow-x-hidden font-sans select-none">
+    <div className="relative min-h-screen bg-dark-900 text-[#F3F4F6] overflow-x-hidden font-sans">
       {/* Dynamic Gold Particles Background */}
       <GoldParticles />
 
