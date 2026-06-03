@@ -401,8 +401,8 @@ export const VIDEOS = {
   eac6eb8c_77b0_4abc_9f67_b140ca37be1d: '/videos/eac6eb8c-77b0-4abc-9f67-b140ca37be1d.MP4',
   /** IMG_0087.MP4 */
   img_0087: '/videos/IMG_0087.MP4',
-  /** IMG_2256.MOV */
-  img_2256: '/videos/IMG_2256.MOV',
+  /** IMG_2256.mp4 */
+  img_2256: '/videos/IMG_2256.mp4',
   /** IMG_7232.MP4 */
   img_7232: '/videos/IMG_7232.MP4',
   /** IMG_7755.MP4 */
