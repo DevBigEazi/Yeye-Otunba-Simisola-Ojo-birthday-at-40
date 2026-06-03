@@ -380,6 +380,8 @@ export const IMAGES = {
   img_9841: '/images/IMG_9841.PNG',
   /** 9c92c583-42dc-4f1c-ab4b-fcc397ddb254.JPG */
   img_9c92c583_42dc_4f1c_ab4b_fcc397ddb254: '/images/9c92c583-42dc-4f1c-ab4b-fcc397ddb254.JPG',
+  /** b5ca7661-d5af-4fbb-be00-59f593984cad.JPG */
+  img_b5ca7661_d5af_4fbb_be00_59f593984cad: '/images/b5ca7661-d5af-4fbb-be00-59f593984cad.JPG',
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

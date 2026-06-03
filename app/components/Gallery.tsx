@@ -7,10 +7,10 @@ import { IMAGES, IMAGES_LIST } from "../constants/media";
 export default function Gallery() {
   // Pre-load showcase images for the 5 grid slots
   const showcaseImages = [
-    IMAGES.img_0621f98d_eea1_4751_bf85_b4a24132b6e8,
+    IMAGES.img_274f413a_9d25_40f4_88c9_b3f46f694cd0,
     IMAGES.img_073395c7_124a_4736_95d7_51b2c15616f7,
-    IMAGES.img_11c6f185_0eb7_462d_8d25_4a56f672b2f2,
-    IMAGES.img_19758385_b8c0_4fa3_84f5_21285fde6133,
+    IMAGES.img_b5ca7661_d5af_4fbb_be00_59f593984cad,
+    IMAGES.img_9c92c583_42dc_4f1c_ab4b_fcc397ddb254,
     IMAGES.img_1e056192_911c_4667_9695_5c86c7801189,
   ];
 
