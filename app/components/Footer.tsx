@@ -8,7 +8,7 @@ interface FooterProps {
 
 export default function Footer({ scrollToSection }: FooterProps) {
   return (
-    <footer className="relative bg-dark-900 text-gray-400 py-10 md:py-16 px-6 border-t border-gray-800/20 select-none">
+    <footer className="relative bg-dark-900 text-gray-400 py-10 md:py-16 px-6 border-t border-gray-800/20">
       {/* Background Radial Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(197,168,128,0.02)_0%,transparent_60%)] pointer-events-none" />
 
